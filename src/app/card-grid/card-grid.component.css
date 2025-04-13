@@ -1,0 +1,4 @@
+.grad {
+    background-image: linear-gradient(lightskyblue, rgb(203, 230, 239));
+    width: 100%;
+  }

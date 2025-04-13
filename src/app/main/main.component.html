@@ -1,0 +1,10 @@
+
+  <main class="main">
+    <img src="../assets/images/logo.png" class="logoImg" style="padding-left: 10px;"/>
+    <button mat-raised-button disabled style="padding-left: 10px;color:red; font-weight: bold;">SCORE: {{score}}</button>
+    <span style="padding-left: 20px;"></span>
+    <button mat-raised-button (click)="resetGame()" style="background-color: #f2e27c;">RESET</button>
+      
+  </main>
+<app-card-grid [cards]="cards" (scoreValue)="updateScore($event)" [score]="score"></app-card-grid>
+    

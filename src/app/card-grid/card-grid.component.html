@@ -1,0 +1,9 @@
+
+    <div style="justify-items: center;" class="grad">
+    <mat-grid-list cols="4" rowHeight="3:2" style="width:50%;">
+
+        @for(card of cards; track card.id){
+            <mat-grid-tile><app-card [cards]="cards" [card]="card" (selected)="selectCard($event)" (scoreValue)="updateScore($event)" [score]="score"></app-card></mat-grid-tile>
+        }
+      </mat-grid-list>
+    </div>

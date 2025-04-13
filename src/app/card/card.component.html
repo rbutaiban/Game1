@@ -1,0 +1,22 @@
+<div class="tp-wrapper">
+  <div *ngIf="card.success">
+	<div class="tp-box success-box" [@flipState]="card.flip" (click)="selectCard()">
+        <div class="tp-box__side tp-box__front">
+            <img src="../assets/images/logo.png" style="width:75px;height:75px;margin-top: 100px;">
+		    </div>
+		    <div class="tp-box__side tp-box__back">             
+              <img src="{{card.img}}" style="width:75px;height:75px;margin-top: 100px;">    
+		    </div>
+	</div>
+</div>
+<div *ngIf="!card.success">
+  <div class="tp-box normal-box" [@flipState]="card.flip" (click)="selectCard()">
+    <div class="tp-box__side tp-box__front">
+        <img src="../assets/images/logo.png" style="width:75px;height:75px;margin-top: 100px;">
+    </div>
+    <div class="tp-box__side tp-box__back">        
+          <img src="{{card.img}}" style="width:75px;height:75px;margin-top: 100px;">    
+    </div>
+</div>
+</div>
+</div>
